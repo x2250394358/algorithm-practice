@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉诺塔动画演示</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>汉诺塔动画演示</h1>
+    <!--盘子数量-->
+    <div class="controls">
+        <label for="diskInput">
+            盘子数量：
+        </label>
+        <input type="number" id="diskInput" min="1" max="10" value="3">
+    </div>
+
+    <!--汉诺塔区域-->
+    <div class="tower-container">
+
+    <div class="tower" id="towerA">
+        <h2>A</h2>
+        <div class="pole"></div>
+    </div>
+
+    <div class="tower" id="towerB">
+          <h2>B</h2>
+          <div class="pole"></div>
+         </div>
+
+      <div class="tower" id="towerC">
+          <h2>C</h2>
+          <div class="pole"></div>
+        </div>
+
+        <div class="disk-layer"></div>
+
+    </div>
+
+    <!--operation button-->
+    <div class="nuttons">
+        <button id="prevButton">
+            上一步
+        </button>
+
+        <button id="nextButton">
+            下一步
+        </button>
+        <button id="autoplay">
+            播放
+        </button>
+        <button id="resetButton">
+            重置
+        </button>
+        
+
+        <!--current steps-->
+        <div class="step-info">
+            第
+            <span id="currentStep"></span>
+            /
+            <span id="totalSteps"></span>
+            步
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

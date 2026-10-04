@@ -1,0 +1,89 @@
+/* 整个页面 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* 三根柱子的容器 */
+.tower-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+
+    position: relative;
+}
+.disk-layer {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+/* 每一根柱子 */
+.tower {
+    width: 200px;
+    height: 300px;
+
+    position: relative;
+}
+
+/* A、B、C */
+.tower h2 {
+    margin-bottom: 20px;
+}
+
+
+/* 柱子 */
+.pole {
+    width: 10px;
+    height: 200px;
+
+    background-color: black;
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 20px;
+}
+
+/* 底座 */
+.tower::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 15px;
+
+    background-color: black;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 10px;
+}
+
+
+.disk {
+    height: 15px;
+    background-color: steelblue;
+    border-radius: 5px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    transition: left 0.5s ease, bottom 0.5s ease;
+}
